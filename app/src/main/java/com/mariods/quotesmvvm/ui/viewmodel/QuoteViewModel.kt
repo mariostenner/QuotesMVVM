@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.mariods.quotesmvvm.data.model.QuoteModel
 import com.mariods.quotesmvvm.domain.GetQuotes
 import com.mariods.quotesmvvm.domain.GetRandomQuote
+import com.mariods.quotesmvvm.domain.model.Quote
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -16,7 +17,7 @@ class QuoteViewModel @Inject constructor(
     var getRandomQuote: GetRandomQuote
 ) : ViewModel() {
 
-    val quoteModel = MutableLiveData<QuoteModel>()
+    val quoteModel = MutableLiveData<Quote>()
     //var getQuotesUseCase = GetQuotes()
     //var getRandomQuote = GetRandomQuote()
 
@@ -35,14 +36,19 @@ class QuoteViewModel @Inject constructor(
     }
 
     fun randomQuote() {
-        isLoading.value = true
 
-        val quote = getRandomQuote()
-        if (quote != null) {
-            quoteModel.value = quote
+
+        viewModelScope.launch {
+            isLoading.value = true
+            val quote = getRandomQuote()
+            if (quote != null) {
+                quoteModel.value = quote
+            }
+            isLoading.value = false
         }
 
-        isLoading.value = false
+
+
 
 //        val currentQuote: QuoteModel = QuoteProvider.random()
 //       quoteModel.value = currentQuote

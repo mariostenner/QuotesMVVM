@@ -3,9 +3,11 @@ package com.mariods.quotesmvvm.data.model
 import javax.inject.Inject
 import javax.inject.Singleton
 
-@Singleton
-class QuoteProvider @Inject constructor(){
+//Se puede utilizar solo para informacion dummy sin base de datos
 
-        var quotes: List<QuoteModel> = emptyList()
-
-}
+//@Singleton
+//class QuoteProvider @Inject constructor(){
+//
+//        var quotes: List<QuoteModel> = emptyList()
+//
+//}
