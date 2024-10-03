@@ -42,7 +42,9 @@ android {
 
 dependencies {
 
+    testImplementation(libs.junit.jupiter)
     val room_version = "2.6.1"
+    val mockkVersion ="1.13.12"
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -54,7 +56,7 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation ("com.google.code.gson:gson:2.9.0")
     implementation("com.squareup.okhttp3:okhttp:4.11.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.5")
     implementation("com.google.dagger:hilt-android:2.46")
     kapt("com.google.dagger:hilt-android-compiler:2.46")
     implementation("androidx.room:room-runtime:$room_version")
@@ -62,6 +64,9 @@ dependencies {
     // To use Kotlin annotation processing tool (kapt)
     implementation("androidx.room:room-ktx:$room_version")
     testImplementation(libs.junit)
+    testImplementation("io.mockk:mockk:${mockkVersion}")
+    testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.5")
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
