@@ -41,9 +41,8 @@ class GetRandomQuoteTest{
     @Test
     fun validateRepositoryIsNotEmpty() = runBlocking {
 
-        val listDummy = listOf(Quote("Never give up", " Mario"))
-
         //given
+        val listDummy = listOf(Quote("Never give up", " Mario"))
         coEvery { repository.getAllQuotesFromDataBase() } returns listDummy
 
         //when (cuando se llame al repositorio
