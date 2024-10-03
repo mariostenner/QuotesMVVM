@@ -42,7 +42,9 @@ android {
 
 dependencies {
 
+    testImplementation(libs.junit.jupiter)
     val room_version = "2.6.1"
+    val mockkVersion ="1.13.12"
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -62,6 +64,7 @@ dependencies {
     // To use Kotlin annotation processing tool (kapt)
     implementation("androidx.room:room-ktx:$room_version")
     testImplementation(libs.junit)
+    testImplementation("io.mockk:mockk:${mockkVersion}")
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
