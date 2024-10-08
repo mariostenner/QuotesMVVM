@@ -3,9 +3,11 @@ name: Android CI
 on:
   push:
     branches:
+      - cicd
       - main
   pull_request:
     branches:
+      - cicd
       - main
 
 jobs:
