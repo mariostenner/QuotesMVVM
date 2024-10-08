@@ -1,6 +1,6 @@
 package com.mariods.quotesmvvm.data.network
 
-import com.mariods.quotesmvvm.data.model.QuoteModel
+import com.mariods.quotesmvvm.data.network.model.QuoteModel
 import retrofit2.Response
 
 import retrofit2.http.GET

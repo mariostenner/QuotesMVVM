@@ -1,4 +1,4 @@
-package com.mariods.quotesmvvm.data.model
+package com.mariods.quotesmvvm.data.network.model
 
 import javax.inject.Inject
 import javax.inject.Singleton

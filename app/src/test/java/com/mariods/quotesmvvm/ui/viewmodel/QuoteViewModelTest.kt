@@ -38,7 +38,7 @@ class QuoteViewModelTest{
         MockKAnnotations.init(this)
         quoteViewModel = QuoteViewModel(getQuotesUseCase,getRandomQuote)
 
-        Dispatchers.setMain(Dispatchers.Unconfined) // Se cambia el dispatcher para correr las corrutinas
+        Dispatchers.setMain(Dispatchers.Unconfined) // Se cambia el dispatcher para correr las corrutinas en hilos diferentes
 
     }
 

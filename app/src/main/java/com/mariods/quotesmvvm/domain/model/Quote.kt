@@ -1,7 +1,7 @@
 package com.mariods.quotesmvvm.domain.model
 
 import com.mariods.quotesmvvm.data.database.entities.QuoteEntity
-import com.mariods.quotesmvvm.data.model.QuoteModel
+import com.mariods.quotesmvvm.data.network.model.QuoteModel
 
 data class Quote(val quote: String, val author: String)
 

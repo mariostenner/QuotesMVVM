@@ -1,7 +1,7 @@
 package com.mariods.quotesmvvm.data.network
 
 import com.mariods.quotesmvvm.core.RetrofitHelper
-import com.mariods.quotesmvvm.data.model.QuoteModel
+import com.mariods.quotesmvvm.data.network.model.QuoteModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.Retrofit

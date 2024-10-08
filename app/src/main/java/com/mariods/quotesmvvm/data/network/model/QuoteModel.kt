@@ -1,4 +1,4 @@
-package com.mariods.quotesmvvm.data.model
+package com.mariods.quotesmvvm.data.network.model
 
 import com.google.gson.annotations.SerializedName
 

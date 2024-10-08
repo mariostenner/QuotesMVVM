@@ -3,7 +3,7 @@ package com.mariods.quotesmvvm.ui.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mariods.quotesmvvm.data.model.QuoteModel
+import com.mariods.quotesmvvm.data.network.model.QuoteModel
 import com.mariods.quotesmvvm.domain.GetQuotes
 import com.mariods.quotesmvvm.domain.GetRandomQuote
 import com.mariods.quotesmvvm.domain.model.Quote
